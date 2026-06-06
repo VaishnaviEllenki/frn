@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Location - Food Rescue Network</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+    <header class="glass-nav">
+        <div class="nav-brand">
+            <a href="index.html">
+                <h1><i class="fa-solid fa-leaf"></i> Food Rescue Network</h1>
+            </a>
+        </div>
+        <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="howitworks.html">How It Works</a>
+            <a href="getinvolved.html">Get Involved</a>
+            <a href="blognews.html">Blog & News</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+    </header>
+
+    <main class="container" style="flex: 1; display: flex; justify-content: center; align-items: center;">
+        <div class="glass-card fade-in" style="width: 100%; max-width: 500px; text-align: center;">
+            <h2 style="color: var(--primary-color); margin-bottom: 2rem;"><i class="fa-solid fa-location-dot"></i> Find Food Rescue Location</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Enter your area to find nearby food rescue operations.</p>
+            
+            <div class="form-group" style="text-align: left;">
+                <label>Location / ZIP Code</label>
+                <div style="display: flex; gap: 1rem;">
+                    <input type="text" class="form-control" placeholder="e.g. New York, NY">
+                    <button class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                </div>
+            </div>
+            
+            <div style="margin-top: 2rem; border-top: 1px solid var(--glass-border); padding-top: 1rem;">
+                <p style="font-size: 0.9rem; color: var(--text-muted);">
+                    <i class="fa-solid fa-circle-info"></i> More locations are being added regularly.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Food Rescue Network. Dedicated to reducing food waste.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

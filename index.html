@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Rescue Network</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="glass-nav">
+        <div class="nav-brand">
+            <a href="index.html">
+                <h1><i class="fa-solid fa-leaf"></i> Food Rescue Network</h1>
+            </a>
+            <p>"Rescue food, feed hope."</p>
+        </div>
+        <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="howitworks.html">How It Works</a>
+            <a href="getinvolved.html">Get Involved</a>
+            <a href="blognews.html">Blog & News</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h2>Rescue Food, Feed Hope.</h2>
+                <p>We are committed to reducing food waste and ensuring that surplus food reaches those who need it most. Join us to build a sustainable food system.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem;">
+                    <a href="getinvolved.html" class="btn btn-primary">Get Involved</a>
+                    <a href="howitworks.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+            <!-- If images exist, keep them -->
+            <img src="images/main1.JPG" alt="Food Rescue" class="hero-image" onerror="this.style.display='none'">
+        </section>
+        
+        <!-- Mission / Details Container -->
+        <div class="container">
+            <div class="glass-card grid-2" style="margin-bottom: 4rem;">
+                <div>
+                    <h2 style="color: var(--primary-color);">Our Mission</h2>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                        Work together with Food Donors, Volunteers, and Recipients to ensure no food goes to waste. Join us in this mission to make a difference and help feed those in need.
+                    </p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+                        <li><i class="fa-solid fa-check" style="color: var(--primary-color); margin-right: 0.5rem;"></i> Connect local donors to volunteers</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--primary-color); margin-right: 0.5rem;"></i> Deliver meals to shelters</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--primary-color); margin-right: 0.5rem;"></i> Reduce global food waste</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="images/img2.jpg" alt="Rescued Food" style="width: 100%; border-radius: 12px; box-shadow: var(--glass-shadow);" onerror="this.style.display='none'">
+                </div>
+            </div>
+
+            <!-- How It Works Teaser -->
+            <section class="glass-card" style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 2rem;">Flow of Process</h2>
+                <div class="grid-3">
+                    <div style="padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <i class="fa-solid fa-box-open fa-3x" style="color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3>1. Donate</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Restaurants & individuals register to donate excess food.</p>
+                    </div>
+                    <div style="padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <i class="fa-solid fa-truck fa-3x" style="color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3>2. Collect</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Our dedicated volunteers collect the food from donors.</p>
+                    </div>
+                    <div style="padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <i class="fa-solid fa-hand-holding-heart fa-3x" style="color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3>3. Distribute</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">The collected food is delivered to shelters and people in need.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats -->
+            <section class="stats-container glass-card">
+                <h2>Our Impact</h2>
+                <div class="grid-3" style="margin-top: 2rem;">
+                    <div class="stat-item">
+                        <h3>10k+</h3>
+                        <p>Meals Rescued</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Volunteers</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>300+</h3>
+                        <p>Food Donors</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Food Rescue Network. Dedicated to reducing food waste.</p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:foodrescuenetwork@gmail.com">foodrescuenetwork@gmail.com</a></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

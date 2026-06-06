@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Sign-Up - Food Rescue Network</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="justify-content: center; align-items: center; min-height: 100vh;">
+    <div class="glass-card" style="width: 100%; max-width: 450px; text-align: center; margin: 2rem;">
+        <h2 style="color: var(--primary-color); margin-bottom: 2rem;"><i class="fa-solid fa-user-plus"></i> Donor Sign-Up</h2> 
+        <form action="#" method="post" style="text-align: left;">
+            <div class="form-group">
+                <label for="donor-name">Donor Name</label>
+                <input type="text" id="donor-name" name="donor_name" class="form-control" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Create a password" required>
+            </div>
+
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+            </div>
+        </form>
+        <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+            Already have an account? <a href="donorlogin.html" style="color: var(--primary-color);">Log In</a>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">
+            <a href="index.html" style="color: var(--text-muted);"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        </p>
+    </div>
+</body>
+</html>

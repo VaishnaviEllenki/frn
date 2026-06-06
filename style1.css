@@ -1,0 +1,95 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9e5c1;
+    color: #4b0082;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #ffb347;
+    padding: 15px;
+    text-align: center;
+    color: #4b0082;
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 10px;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #4b0082;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #6a0dad;
+}
+
+section {
+    padding: 30px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+button {
+    background-color: #4b0082;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background-color: #2e2c30;
+    transform: scale(1.05);
+}
+
+input, textarea {
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #4b0082;
+    border-radius: 8px;
+    width: 80%;
+    font-size: 25;
+}
+
+footer p {
+    font-size: 30px;
+}
+.how-it-works {
+    background-color:  #f9e5c1;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.how-it-works h2 {
+    text-align: center;
+}
+
+.how-it-works ol {
+    list-style-type: dot;
+    padding-left: 20px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.image_container {
+    width: 35%;
+    text-align: center;
+}
+

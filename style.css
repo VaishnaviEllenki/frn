@@ -1,0 +1,92 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fce4ec;
+    color: #4a148c;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #ba68c8;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #ab47bc;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #8e24aa;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #ab47bc;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8e24aa;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ab47bc;
+    border-radius: 5px;
+    width: 80%;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.image-container img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    animation: bounce 2s infinite alternate;
+}
+
+.image-container p {
+    flex: 1;
+    font-size: 18px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}

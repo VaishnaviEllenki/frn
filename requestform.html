@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipient Request - Food Rescue Network</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="C:\Users\vyshu\OneDrive\Desktop\RTRP\lctn.js" async defer></script>
+    <style>
+        #map {
+            height: 300px;
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            border: 1px solid var(--glass-border);
+        }
+    </style>
+</head>
+<body style="justify-content: center; align-items: center; min-height: 100vh;">
+    <script>
+    let map;
+    let marker;
+    let geocoder;
+
+    function initMap() {
+        if(typeof google === 'undefined') return;
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: -34.397, lng: 150.644 },
+            zoom: 8
+        });
+
+        geocoder = new google.maps.Geocoder();
+        marker = new google.maps.Marker({
+            map: map,
+            draggable: true
+        });
+
+        marker.addListener('dragend', function () {
+            geocoder.geocode({ 'location': marker.getPosition() }, function (results, status) {
+                if (status === 'OK' && results[0]) {
+                    document.getElementById('location').value = results[0].formatted_address;
+                }
+            });
+        });
+
+        document.getElementById('location').addEventListener('blur', function () {
+            geocodeAddress();
+        });
+    }
+
+    function geocodeAddress() {
+        if(typeof google === 'undefined') return;
+        let address = document.getElementById('location').value;
+        if(!address) return;
+        geocoder.geocode({ 'address': address }, function (results, status) {
+            if (status === 'OK') {
+                map.setCenter(results[0].geometry.location);
+                marker.setPosition(results[0].geometry.location);
+            } else {
+                console.log('Geocode was not successful: ' + status);
+            }
+        });
+    }
+    </script>
+
+    <div class="glass-card" style="width: 100%; max-width: 600px; margin: 2rem;">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h2 style="color: var(--primary-color);"><i class="fa-solid fa-hand-holding-hand"></i> Recipient Request</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Submit a request for food rescue assistance.</p>
+        </div>
+        
+        <form>
+            <div class="form-group">
+                <label for="name">Name / Organization Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your organization name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="Enter mobile number" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="quantity">Quantity of Food Needed (kg or units)</label>
+                <input type="number" id="quantity" name="quantity" class="form-control" min="1" placeholder="e.g. 10" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Delivery Location</label>
+                <input type="text" id="location" name="location" class="form-control" placeholder="Enter address or drag marker" required>
+                <div id="map"></div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem;">Submit Request</button>
+            <p style="text-align: center; margin-top: 1rem; font-size: 0.8rem;">
+                <a href="index.html" style="color: var(--text-muted);"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

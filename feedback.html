@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Food Rescue Network</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="glass-nav">
+        <div class="nav-brand">
+            <a href="index.html">
+                <h1><i class="fa-solid fa-leaf"></i> Food Rescue Network</h1>
+            </a>
+        </div>
+        <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="howitworks.html">How It Works</a>
+            <a href="getinvolved.html">Get Involved</a>
+            <a href="blognews.html">Blog & News</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="glass-card fade-in" style="max-width: 600px; margin: 4rem auto; text-align: center;">
+            <h2 style="color: var(--primary-color); margin-bottom: 2rem;"><i class="fa-solid fa-comments"></i> Leave Feedback</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Your feedback helps us improve our network and save more food.</p>
+            
+            <form action="submit_feedback.php" method="POST" style="text-align: left;">
+                <div class="form-group">
+                    <label>Your Name (Optional)</label>
+                    <input type="text" name="name" class="form-control" placeholder="John Doe">
+                </div>
+                <div>
+                    <label>Your Email *</label>
+                <input type="email" name="email" class="form-control" placeholder="your.email@example.com" required>
+                                    </div>
+                <div class="form-group">
+                    <label>Your Role</label>
+                    <select name="role" class="form-control" style="background-color: var(--bg-color);" required>
+                        <option value="">Select Role</option>
+                        <option value="Donor">Donor</option>
+                        <option value="Volunteer">Volunteer</option>
+                        <option value="Recipient">Recipient</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Feedback</label>
+                    <textarea name="message" class="form-control" rows="5" placeholder="Share your experience or suggestions..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem;">Submit Feedback</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Food Rescue Network. Dedicated to reducing food waste.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

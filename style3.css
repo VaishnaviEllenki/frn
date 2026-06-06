@@ -1,0 +1,35 @@
+
+    
+        /* Centering the container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+        }
+
+        /* Styling and animating the image */
+        .motion-image {
+            width: 300px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+            animation: alightMotion 3s infinite alternate ease-in-out;
+        }
+
+        /* Keyframes for motion effect */
+        @keyframes alightMotion {
+            0% {
+                transform: translateY(0px) scale(1);
+                filter: brightness(1);
+            }
+            50% {
+                transform: translateY(-20px) scale(1.05);
+                filter: brightness(1.2);
+            }
+            100% {
+                transform: translateY(0px) scale(1);
+                filter: brightness(1);
+            }
+        }

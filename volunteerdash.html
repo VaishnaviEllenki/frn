@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Dashboard - Food Rescue Network</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        function fetchPickups() {
+            fetch('volunteerdash.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('pickups-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching pickups:', error));
+        }
+
+        window.onload = fetchPickups;
+    </script>
+</head>
+<body>
+    <header class="glass-nav">
+        <div class="nav-brand">
+            <a href="index.html">
+                <h1><i class="fa-solid fa-leaf"></i> FRN Volunteer Portal</h1>
+            </a>
+        </div>
+        <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        <nav class="nav-links">
+            <a href="volunteerlogout.php">Log Out <i class="fa-solid fa-right-from-bracket"></i></a>
+        </nav>
+    </header>
+
+    <main class="container" style="max-width: 900px; margin-top: 2rem;">
+        <div class="glass-card">
+            <div class="dashboard-header" style="text-align: left; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h2 style="color: var(--primary-color);">Available Pickups</h2>
+                    <p style="color: var(--text-muted);">Select a donation below to accept the pickup request.</p>
+                </div>
+                <button class="btn btn-outline" onclick="fetchPickups()"><i class="fa-solid fa-rotate-right"></i> Refresh</button>
+            </div>
+            
+            <div id="pickups-container" style="margin-top: 2rem;">
+                <!-- PHP script outputs the list here -->
+                <p>Loading available pickups...</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

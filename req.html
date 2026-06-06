@@ -1,0 +1,106 @@
+<!-- Recipient Food Request Form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Request - Food Rescue Network</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Request Food</h2>
+        <form action="submit-req.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="food-type">Food Type Needed:</label>
+                <input type="text" id="food-type" name="food-type" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity Required:</label>
+                <input type="number" id="quantity" name="quantity" required>
+            </div>
+            <button type="button" onclick="submitRequest()">Submit Request</button>
+        </form>
+    </div>
+
+    <!-- Recipient Food Request Interface -->
+    <div class="dashboard-container" id="volunterr-info" ><center>
+        <h2>Food Request Status</h2>
+        <div class="info-box">
+            <p><strong>Volunteer Assigned:</strong> <span id="volunteer-name">Waiting for assignment...</span></p>
+            <p><strong>Mobile Number:</strong> <span id="volunteer-phone">-</span></p>
+            <p><strong>Current Distance:</strong> <span id="volunteer-distance">-</span></p>
+            <p><strong>Estimated Arrival Time:</strong> <span id="volunteer-time">-</span></p>
+        </div>
+        <button class="refresh-button" onclick="updateVolunteerDetails()">Refresh Status</button>
+    </center></div>
+
+    <script>
+        function updateVolunteerDetails() {
+            // Simulating an update with placeholder details
+            document.getElementById("volunteer-name").innerText = "Alex Johnson";
+            document.getElementById("volunteer-phone").innerText = "+1234567890";
+            document.getElementById("volunteer-distance").innerText = "5 km away";
+            document.getElementById("volunteer-time").innerText = "15 minutes";
+        }
+    </script>
+</body>
+</html>
